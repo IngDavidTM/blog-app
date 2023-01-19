@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'post should be an integer' do
+  it 'post counter should be an integer' do
     subject.posts_counter = 'not-numeric'
     expect(subject).to_not be_valid
   end

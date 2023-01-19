@@ -42,7 +42,7 @@ RSpec.describe Comment, type: :model do
     expect(post.comments_counter).to eq(3)
   end
 
-  it 'recent posts should return the last five posts' do
+  it 'recent comments should return the last five comments' do
     expect(post.recent_comments.length).to be_between(0, 5)
   end
 end
