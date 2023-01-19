@@ -18,4 +18,8 @@ RSpec.describe User, type: :model do
     subject.posts_counter = -1
     expect(subject).to_not be_valid
   end
+
+  it 'recent posts should return the last three posts' do
+    expect(subject.recent_posts).to eq(subject.posts.last(3))
+  end
 end
