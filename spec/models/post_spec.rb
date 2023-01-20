@@ -25,6 +25,11 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'title should be less than 250 characters' do
+    expect(subject.title).to be_a(String)
+    expect(subject.title.length).to be <= 250
+  end
+
   it 'comments counter should be an integer' do
     subject.comments_counter = 'not-numeric'
     expect(subject).to_not be_valid
