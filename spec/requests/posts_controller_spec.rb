@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe PostsController, type: :request do
   describe 'get index action' do
-    before(:example) { get '/users/:user_id/posts', params: { user_id: 1 } } 
+    before(:example) { get '/users/:user_id/posts', params: { user_id: 1 } }
 
     it 'response status should be correct for index' do
       expect(response).to have_http_status(:success)
