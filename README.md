@@ -52,6 +52,8 @@
 ### Key Features <a name="key-features"></a>
 
 - **It contains four tables with a relation one to many**
+- **It allows to create user and post**
+- **It allows to comment and like a post**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,6 +93,18 @@ Install this project with:
 
 ```
 cd blog-app
+bundle install
+```
+
+### Create database
+
+Add the username and password that you are using in psql to `config/database.yml`
+
+Create and migrate the database with:
+
+```
+rails db:create
+rails db:migrate
 ```
 
 ### Usage
@@ -98,7 +112,7 @@ cd blog-app
 To run the project, execute the following command:
 
 ```
-not available
+rails server
 ```
 
 ### Run tests
@@ -106,12 +120,12 @@ not available
 To run tests, run the following command:
 
 ```
-rails server
+rails spec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 👤 **David Tamayo**
 
@@ -151,11 +165,11 @@ I would like to thank Microverse.
 
 ## ❓ FAQ <a name="faq"></a>
 
-- **Do i need node installed?**
+- **Do I need node installed?**
 
   - Yes you do
 
-- **Do i need internet Access**
+- **Do I need internet Access**
 
   - Not necessary
 
