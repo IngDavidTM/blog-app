@@ -79,3 +79,5 @@ gem 'rspec', '>=3.0', '< 4.0'
 group :development, :test do
   gem 'rspec-rails', '~> 6.0.0'
 end
+
+gem 'rails-controller-testing'
