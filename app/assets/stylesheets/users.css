@@ -1,0 +1,62 @@
+.user-card {
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  width: 90%;
+  max-width: 800px;
+  gap: 20px;
+  color: #000;
+}
+
+.user-card img {
+  min-width: 100px;
+  max-height: 100px;
+  object-fit: fill;
+}
+
+.user-card div {
+  display: flex;
+  margin: 5px;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.user-card div h3 {
+  align-self: flex-end;
+}
+
+.bio {
+  margin: auto;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+  border: 1px solid #000;
+}
+
+.bio > * {
+  padding: 10px;
+}
+
+.post-card {
+  margin: auto;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+  border: 1px solid #000;
+}
+
+.post-card > * {
+  padding: 10px;
+}
+
+.comments-likes {
+  align-self: flex-end;
+}
