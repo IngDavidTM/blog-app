@@ -15,12 +15,10 @@
     </div>
     <% end %>
     <div class="post-comment">
-      <%comments = Comment.where(posts_id: post.id)%>
+      <%comments = post.recent_comments%>
       <% comments.each_with_index do |comment, ind| %>
-        <%if ind < 5%>
           <% user = User.find(comment.author_id) %>
           <p><%=user.name%>: <%=comment.text%></p>
-        <% end %>
       <% end %>
     </div>
   <% end %>
