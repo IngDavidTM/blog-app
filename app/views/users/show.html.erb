@@ -11,11 +11,13 @@
     <p><%=@user.bio%></p>
   </div>
   <% @posts.each_with_index do |post, i| %>
-    <div class="post-card">
-      <h3>Post #<%=i+1%></h3>
-      <p><%=post.text%></p>
-      <p class="comments-likes">Comments: <%=post.comments_counter%>, Likes: <%=post.likes_counter%></p>
-    </div>
+    <%if i < 3%>
+      <div class="post-card">
+        <h3>Post #<%=i+1%></h3>
+        <p><%=post.text%></p>
+        <p class="comments-likes">Comments: <%=post.comments_counter%>, Likes: <%=post.likes_counter%></p>
+      </div>
+    <% end %>
   <% end %>
   <button>
     <%= link_to 'See all posts', user_posts_path(@user)%>
