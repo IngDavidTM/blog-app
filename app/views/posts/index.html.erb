@@ -1,1 +1,28 @@
-<h1>Posts</h1>
+<section>
+  <div class="user-card">
+    <img src="<%=@user.photo%>" alt="<%=@user.name%>'s photo"/>
+    <div>
+      <h2><%=@user.name%></h2>
+      <h3>Number of posts: <%=@user.posts_counter%></h3>
+    </div>
+  </div>
+  <% @posts.each_with_index do |post, i| %>
+    <%= link_to user_post_url(id: post.id) do %>
+    <div class="post-card">
+      <h3>Post #<%=i+1%></h3>
+      <p><%=post.text%></p>
+      <p class="comments-likes">Comments: <%=post.comments_counter%>, Likes: <%=post.likes_counter%></p>
+    </div>
+    <% end %>
+    <div class="post-comment">
+      <%comments = post.recent_comments%>
+      <% comments.each_with_index do |comment, ind| %>
+          <% user = User.find(comment.author_id) %>
+          <p><%=user.name%>: <%=comment.text%></p>
+      <% end %>
+    </div>
+  <% end %>
+  <button>
+    <%= link_to 'Pagination', user_path(@user)%>
+  </button>
+</section>

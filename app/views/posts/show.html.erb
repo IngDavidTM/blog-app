@@ -1,1 +1,18 @@
-<h2>Post</h2>
+<section>
+  <div class="post-details">
+    <div>
+      <% user = User.find(@post.author_id) %>
+      <h2>Post #<%=@post.id%> by <%=user.name%></h2>
+      <p class="comments-likes">Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></p>
+    </div>
+    <p>
+      <%=@post.text%>
+    </p>
+  </div>
+  <div class="post-comment">
+    <% @comments.each do |comment| %>
+      <% user = User.find(comment.author_id) %>
+      <p><%=user.name%>: <%=comment.text%></p>
+    <% end %>
+  </div>
+</section>
