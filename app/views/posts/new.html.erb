@@ -1,1 +1,8 @@
-<h1>hello</h1>
+<h1>New post</h1>
+<%= form_with model:@post do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title, placeholder: 'Title'%>
+  <%= f.label :text %><br>
+  <%= f.text_area :text, placeholder: 'Text' %>
+  <%= f.submit "Create Post"%>
+<% end %>

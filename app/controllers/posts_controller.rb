@@ -9,5 +9,14 @@ class PostsController < ApplicationController
     @comments = Comment.where(post_id: params[:id])
   end
 
-  def new; end
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new(params.require(:post).permit(:title, :text))
+    @post.author = current_user
+    @post.save
+    redirect_to user_posts_path(current_user)
+  end
 end
