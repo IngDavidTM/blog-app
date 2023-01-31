@@ -141,7 +141,7 @@ To run tests, add this data to your database:
 Then, run the following command:
 
 ```
-rails spec
+rspec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
