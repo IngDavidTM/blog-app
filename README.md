@@ -117,7 +117,28 @@ rails server
 
 ### Run tests
 
-To run tests, run the following command:
+To run tests, add this data to your database:
+
+**For users**
+
+![Screenshot from 2023-01-31 13-01-10](https://user-images.githubusercontent.com/105117832/215845030-4ae71d1e-c709-4395-9785-4c8e0305e305.png)
+
+**For posts**
+
+![Screenshot from 2023-01-31 13-00-40](https://user-images.githubusercontent.com/105117832/215845218-10c8dea9-7d9d-4108-ba8e-0c05e25b660c.png)
+
+**For likes**
+
+![Screenshot from 2023-01-31 13-00-10](https://user-images.githubusercontent.com/105117832/215845129-8c93edba-0783-4f67-b9db-700f5cfc4ef4.png)
+
+**For comments**
+
+![Screenshot from 2023-01-31 12-59-30](https://user-images.githubusercontent.com/105117832/215845296-750180c6-34ad-4012-bfb2-e20a458ba295.png)
+
+
+
+
+Then, run the following command:
 
 ```
 rails spec
