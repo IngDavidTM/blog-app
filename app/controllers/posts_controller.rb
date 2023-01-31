@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @user = User.includes(:posts, posts: [:comments]).find_by(id: params[:user_id])
+    @user = User.includes(:posts).find_by(id: params[:user_id])
   end
 
   def show
