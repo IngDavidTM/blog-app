@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
-
+gem 'bullet', group: 'development'
+gem 'rack-proxy'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
@@ -74,14 +75,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'rails-controller-testing'
-  gem 'selenium-webdriver'
-end
-
-gem 'rubocop', '>= 1.0', '< 2.0'
-
-gem 'rspec', '>=3.0', '< 4.0'
-
-# Run against this stable release
-group :development, :test do
   gem 'rspec-rails', '~> 6.0.0'
+  gem 'selenium-webdriver'
 end
