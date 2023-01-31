@@ -13,23 +13,24 @@ RSpec.describe PostsController, type: :request do
     end
 
     it 'response body should include the correct placeholder for index' do
-      expect(response.body).to include('Users')
+      expect(response.body).to include('New Post')
     end
   end
 
   describe 'get show action' do
-    before(:example) { get '/users/:user_id', params: { user_id: 1 } }
-
     it 'response status should be correct for show' do
+      get '/users/1'
       expect(response).to have_http_status(:success)
     end
 
     it 'correct template should be rendered for show' do
+      get '/users/1'
       expect(response).to render_template(:show)
     end
 
     it 'response body should include the correct placeholder for show' do
-      expect(response.body).to include('User')
+      get '/users/1'
+      expect(response.body).to include('See all posts')
     end
   end
 end

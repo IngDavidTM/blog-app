@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
-
+gem 'bullet', group: 'development'
+gem 'rack-proxy'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
@@ -51,6 +52,13 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+
+  # Capybara, the library that allows us to interact with the browser using Ruby
+  gem 'capybara'
+
+  # The following gems aids with the nuts and bolts
+  # of interacting with the browser.
+  gem 'webdrivers'
 end
 
 group :development do
@@ -66,18 +74,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
-end
-
-gem 'rubocop', '>= 1.0', '< 2.0'
-
-gem 'rspec', '>=3.0', '< 4.0'
-
-# Run against this stable release
-group :development, :test do
+  gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 6.0.0'
+  gem 'selenium-webdriver'
 end
-
-gem 'rails-controller-testing'

@@ -2,7 +2,7 @@
   <div class="post-details">
     <div>
       <% user = User.find(@post.author_id) %>
-      <h2>Post #<%=@post.id%> by <%=user.name%></h2>
+      <h2>Post: <%=@post.title%> by <%=user.name%></h2>
       <p class="comments-likes">Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></p>
     </div>
     <p>
