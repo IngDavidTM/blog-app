@@ -133,6 +133,14 @@ rails spec
 - Twitter: [@David5TM](https://twitter.com/David5TM)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ing-david-tamayo)
 
+
+👤 **Cesar Alberto Valencia Aguilar**
+
+- GitHub: [@cvalencia1991](https://github.com/cvalencia1991)
+- Twitter: [@cvalenciaguilar](https://twitter.com/cvalenciaguilar)
+- LinkedIn: [@cvalencia1991](https://www.linkedin.com/in/cvalenciaguilar/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
