@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe PostsController, type: :request do
   describe 'get index action' do
-
     it 'response status should be correct for index' do
       get '/users/1/posts'
       expect(response).to have_http_status(:success)

@@ -18,7 +18,6 @@ RSpec.describe PostsController, type: :request do
   end
 
   describe 'get show action' do
-
     it 'response status should be correct for show' do
       get '/users/1'
       expect(response).to have_http_status(:success)

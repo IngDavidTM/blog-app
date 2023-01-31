@@ -32,7 +32,7 @@ RSpec.describe Post, type: :system do
     end
 
     it 'I can see the first comments on a post.' do
-      user = User.includes(:posts, posts: [:author, :comments]).first
+      user = User.includes(:posts, posts: %i[author comments]).first
       visit user_posts_path(user.posts.first.author_id)
       post = user.posts.first
       comment = post.comments.last

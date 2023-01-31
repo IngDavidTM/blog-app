@@ -33,7 +33,7 @@ RSpec.describe Post, type: :system do
     end
 
     it 'I can see the username of each commentor.' do
-      user = User.includes(:posts, posts: [:author, :comments]).first
+      user = User.includes(:posts, posts: %i[author comments]).first
       visit user_post_path(user.posts.first.author_id, user.posts.first.id)
       post = user.posts.first
       post.comments.each do |comment|
@@ -42,7 +42,7 @@ RSpec.describe Post, type: :system do
     end
 
     it 'I can see the comment each commentor left.' do
-      user = User.includes(:posts, posts: [:author, :comments]).first
+      user = User.includes(:posts, posts: %i[author comments]).first
       visit user_post_path(user.posts.first.author_id, user.posts.first.id)
       post = user.posts.first
       comment = post.comments.first
