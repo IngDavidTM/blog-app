@@ -31,7 +31,7 @@ RSpec.describe PostsController, type: :request do
 
     it 'response body should include the correct placeholder for show' do
       get '/users/1'
-      expect(response.body).to include('User')
+      expect(response.body).to include('See all posts')
     end
   end
 end
