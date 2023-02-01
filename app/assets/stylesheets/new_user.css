@@ -1,0 +1,29 @@
+.new_user {
+  align-self: center;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.new_user input {
+  width: 100%;
+}
+
+#user_remember_me {
+  width: auto;
+}
+
+.sign_in {
+  align-self: center;
+}
+
+.sign_up {
+  align-self: center;
+}
+
+.forgot_password {
+  align-self: center;
+}
+
+.unlock_instructions {
+  align-self: center;
+}

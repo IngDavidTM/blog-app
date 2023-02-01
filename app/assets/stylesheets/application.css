@@ -21,6 +21,11 @@
   color: #000;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 button {
   background: none;
   border: 1px solid #000;
