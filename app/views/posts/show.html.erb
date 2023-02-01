@@ -20,4 +20,7 @@
   </div>
   <%= render 'shared/like' %>
   <%= render 'shared/comment' %>
+  <%= link_to 'Delete', user_post_path(user, @post), data: {
+    turbo_method: :delete
+  } %>
 </section>
