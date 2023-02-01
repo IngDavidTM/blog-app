@@ -13,8 +13,11 @@
     <% @comments.each do |comment| %>
       <% user = User.find(comment.author_id) %>
       <p><%=user.name%>: <%=comment.text%></p>
+      <%= link_to 'Delete', user_post_comment_path(user, @post, comment), data: {
+        turbo_method: :delete
+      } %>
     <% end %>
   </div>
   <%= render 'shared/like' %>
-    <%= render 'shared/comment' %>
+  <%= render 'shared/comment' %>
 </section>

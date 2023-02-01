@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.includes(:posts).find_by(id: params[:user_id])
   end
@@ -21,6 +22,12 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.decrement_posts_counter
+    @post.destroy
   end
 
   private
