@@ -54,6 +54,7 @@
 - **It contains four tables with a relation one to many**
 - **It allows to create user and post**
 - **It allows to comment and like a post**
+- **Add autorization with gem devise**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
