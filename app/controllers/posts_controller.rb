@@ -27,13 +27,9 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @likes = Like.where(post_id: @post.id)
-    @likes.each do |like|
-      like.destroy
-    end
+    @likes.each(&:destroy)
     @comments = Comment.where(post_id: @post.id)
-    @comments.each do |comment|
-      comment.destroy
-    end
+    @comments.each(&:destroy)
     if @post.destroy
       @post.decrement_posts_counter
       redirect_to user_path(current_user), status: :see_other
