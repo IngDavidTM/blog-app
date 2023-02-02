@@ -1,9 +1,20 @@
 class Api::V1::CommentsController < Api::V1::ApplicationController
   before_action :set_comment, only: %i[show update destroy]
 
+  def index
+    @comments = Comment.where(post_id: params[:post_id])
+
+    render json: @comments, only: [:id, :text ]
+  end
+
+  def show
+    render json: @commment
+  end
+
   def create
-    @comment = Comment.new(params[:id])
-    @comment.author = current_user
+    @comment = Comment.new(comment_params)
+    @comment.author = User.first
+    @comment.post = Post.where(id: parameters[:id])
 
     if @comment.save
       render json: @comment, status: :created, location: @comment
