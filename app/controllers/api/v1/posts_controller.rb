@@ -1,10 +1,10 @@
 class Api::V1::PostsController < Api::V1::ApplicationController
-  before_action :set_post, only: [:show, :update, :destroy]
+  before_action :set_post, only: %i[show update destroy]
 
   def index
     @posts = Post.where(author_id: params[:user_id])
 
-    render json: @posts, only: [:title, :text ]
+    render json: @posts, only: %i[title text]
   end
 
   def show
@@ -21,7 +21,7 @@ class Api::V1::PostsController < Api::V1::ApplicationController
     end
   end
 
-   # PATCH/PUT /posts/1
+  # PATCH/PUT /posts/1
   def update
     if @post.update(post_params)
       render json: @post
@@ -36,13 +36,14 @@ class Api::V1::PostsController < Api::V1::ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:text)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def post_params
+    params.require(:post).permit(:text)
+  end
 end
