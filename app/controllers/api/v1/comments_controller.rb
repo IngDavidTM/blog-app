@@ -4,7 +4,7 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
   def index
     @comments = Comment.where(post_id: params[:post_id])
 
-    render json: @comments, only: [:id, :text ]
+    render json: @comments, only: %i[id text]
   end
 
   def show
