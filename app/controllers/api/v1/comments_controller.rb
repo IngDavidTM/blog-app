@@ -1,4 +1,5 @@
 class Api::V1::CommentsController < Api::V1::ApplicationController
+  load_and_authorize_resource
   before_action :set_comment, only: %i[show update destroy]
 
   def index
