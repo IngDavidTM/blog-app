@@ -56,6 +56,7 @@
 - **It allows to comment and like a post**
 - **Add authentication with gem devise**
 - **Add autorization using Cancan**
+-**Implement APIs**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

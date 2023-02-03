@@ -22,6 +22,10 @@ gem 'letter_opener', group: :development
 
 gem 'cancancan'
 
+gem 'active_model_serializers', '~> 0.10.13'
+
+gem 'responders'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 
